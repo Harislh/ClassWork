@@ -1,0 +1,15 @@
+img {
+  float: right;
+  margin: 10px 50px;
+}
+
+#char {
+  margin-top: 5px;
+  font-size: 100px;
+  font-weight: bold;
+  padding: 0px 30px;
+}
+
+.clear-proper {
+  clear: right;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 2px solid black;
+        margin-left: 100px;
+        margin-bottom: 30px;
+        display: none;
+      }
+
+      .outter {
+        border: 2px solid black;
+        width: 500px;
+        padding: 20px;
+      }
+
+      h1 {
+        background-color: red;
+        border: 1px solid black;
+        color: white;
+        text-align: center;
+      }
+
+      h1:hover + .box {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outter">
+      <h1>Hover here to show the box</h1>
+      <div id="box-1" class="box">Boo</div>
+    </div>
+  </body>
+</html>
