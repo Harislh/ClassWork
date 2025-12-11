@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Harish Animation</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        /* Moving Gradient Background */
+        background: linear-gradient(
+          90deg,
+          red,
+          blue,
+          yellow,
+          orangered,
+          purple,
+          green,
+          brown
+        );
+        background-size: 300%;
+        animation: bgMove 12s linear infinite;
+      }
+
+      /* Background Animation */
+      @keyframes bgMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 50% 100%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .name {
+        display: flex;
+        gap: 30px;
+        font-size: 120px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .name span {
+        display: inline-block;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+      }
+
+      /* H */
+      .name span:nth-child(1) {
+        animation-name: hmove;
+        animation-timing-function: ease;
+      }
+      @keyframes hmove {
+        0% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+        25% {
+          transform: translateY(-40vh) rotate(20deg) skew(10deg);
+        }
+        50% {
+          transform: translateY(40vh) rotate(-20deg) skew(-5deg);
+        }
+        75% {
+          transform: translateY(-40vh) rotate(10deg) skew(5deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+      }
+
+      /* A */
+      .name span:nth-child(2) {
+        animation-name: amove;
+        animation-timing-function: ease-in;
+      }
+      @keyframes amove {
+        0% {
+          transform: translateX(0) rotate(0deg) skew(0deg);
+        }
+        25% {
+          transform: translateX(-25vw) rotate(-30deg) skew(12deg);
+        }
+        50% {
+          transform: translateX(25vw) rotate(10deg) skew(-10deg);
+        }
+        75% {
+          transform: translateX(-25vw) rotate(5deg) skew(7deg);
+        }
+        100% {
+          transform: translateX(0) rotate(0deg) skew(0deg);
+        }
+      }
+
+      /* R */
+      .name span:nth-child(3) {
+        animation-name: rmove;
+        animation-timing-function: ease-out;
+      }
+      @keyframes rmove {
+        0% {
+          transform: translate(0, 0) rotate(0deg) skew(0deg) scale(1);
+        }
+        25% {
+          transform: translate(20vw, -40vh) rotate(40deg) skew(15deg) scale(1.3);
+        }
+        50% {
+          transform: translate(-20vw, 40vh) rotate(-20deg) skew(-10deg)
+            scale(0.8);
+        }
+        75% {
+          transform: translate(20vw, -40vh) rotate(20deg) skew(5deg) scale(1.2);
+        }
+        100% {
+          transform: translate(0, 0) rotate(0deg) skew(0deg) scale(1);
+        }
+      }
+
+      /* I */
+      .name span:nth-child(4) {
+        animation-name: imove;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes imove {
+        0% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+        25% {
+          transform: translateY(-45vh) rotate(60deg) skew(20deg);
+        }
+        50% {
+          transform: translateY(45vh) rotate(-40deg) skew(-10deg);
+        }
+        75% {
+          transform: translateY(-45vh) rotate(30deg) skew(5deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+      }
+
+      /* S */
+      .name span:nth-child(5) {
+        animation-name: smove;
+        animation-timing-function: linear;
+      }
+      @keyframes smove {
+        0% {
+          transform: translateX(0) rotate(0deg) skew(0deg);
+        }
+        25% {
+          transform: translateX(30vw) rotate(50deg) skew(25deg);
+        }
+        50% {
+          transform: translateX(-30vw) rotate(-30deg) skew(-15deg);
+        }
+        75% {
+          transform: translateX(30vw) rotate(20deg) skew(10deg);
+        }
+        100% {
+          transform: translateX(0) rotate(0deg) skew(0deg);
+        }
+      }
+
+      /* H */
+      .name span:nth-child(6) {
+        animation-name: h2move;
+        animation-timing-function: cubic-bezier(0.7, -0.5, 0.3, 1.4);
+      }
+      @keyframes h2move {
+        0% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+        25% {
+          transform: translateY(-35vh) rotate(-50deg) skew(18deg);
+        }
+        50% {
+          transform: translateY(35vh) rotate(25deg) skew(-15deg);
+        }
+        75% {
+          transform: translateY(-35vh) rotate(10deg) skew(8deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg) skew(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="name">
+      <span>H</span>
+      <span>A</span>
+      <span>R</span>
+      <span>I</span>
+      <span>S</span>
+      <span>H</span>
+    </div>
+  </body>
+</html>
