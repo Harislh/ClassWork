@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      let password = prompt("Enter your password: ");
+
+      let isUpper = false;
+      let isLower = false;
+      let isSpecial = false;
+      let isDigit = false;
+      let validPassword = true;
+
+      let passLength = password.length;
+
+      if (passLength >= 8) {
+        for (let i = 0; i < passLength; i++) {
+          let ch = password.charAt(i);
+
+          if (ch.charCodeAt() >= 65 && ch.charCodeAt() <= 90) {
+            isUpper = true;
+            continue;
+          } else if (ch.charCodeAt() >= 97 && ch.charCodeAt() <= 122) {
+            isLower = true;
+            continue;
+          } else if (ch.charCodeAt() >= 48 && ch.charCodeAt() <= 57) {
+            isDigit = true;
+            continue;
+          } else {
+            isSpecial = true;
+          }
+        }
+      } else {
+        validPassword = false;
+      }
+
+      if (isUpper && isLower && isDigit && isSpecial && validPassword) {
+        let firstLetter = password[0];
+        if (firstLetter.charCodeAt() >= 48 && firstLetter.charCodeAt() <= 57) {
+          document.write("Not a Valid Password");
+        } else {
+          document.write("Valid Password");
+        }
+      } else {
+        document.write("Not a Valid Password");
+      }
+    </script>
+  </body>
+</html>

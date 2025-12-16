@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>loop</title>
+  </head>
+  <body>
+    <script>
+      let pass = prompt("Enter the password: ");
+
+      let check = true;
+
+      while (check) {
+        let validate = prompt("Validate password: ");
+        if (pass === validate) {
+          document.write("VAlidation successfull");
+          check = false;
+        } else {
+          alert("Please try again!!!!!");
+        }
+      }
+    </script>
+  </body>
+</html>

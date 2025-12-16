@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 11, 12];
+      document.write("Lenth of the arr[] => " + arr.length);
+      let even = [];
+      let odd = [];
+      for (var ele of arr) {
+        if (ele % 2 === 0) {
+          even.push(ele);
+        } else {
+          odd.push(ele);
+        }
+      }
+      document.write("<br>Even Array => [" + even + "]");
+      document.write("<br>Odd Array => [" + odd + "]");
+      let sum = 0;
+      for (var val of arr) {
+        sum += val;
+      }
+      document.write("<br>Sum of Array => [" + sum + "]");
+    </script>
+  </body>
+</html>

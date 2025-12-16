@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      let students = {
+        student1: {
+          name: "Harish",
+          city: "Warangal",
+          branch: "CSE",
+          college: "BVC",
+        },
+        student2: {
+          name: "Rahul",
+          city: "Hyderabad",
+          branch: "ECE",
+          college: "VCE",
+        },
+        student3: {
+          name: "Suresh",
+          city: "Karimnagar",
+          branch: "MECH",
+          college: "JNTU",
+        },
+        student4: {
+          name: "Anjali",
+          city: "Nizamabad",
+          branch: "EEE",
+          college: "OU",
+        },
+        student5: {
+          name: "Priya",
+          city: "Khammam",
+          branch: "IT",
+          college: "CBIT",
+        },
+      };
+
+      for (let key in students) {
+        document.write(
+          "<p>I am " +
+            students[key].name +
+            " from " +
+            students[key].city +
+            ", and I am a " +
+            students[key].branch +
+            " student from " +
+            students[key].college +
+            " college.</p>"
+        );
+      }
+    </script>
+  </body>
+</html>
